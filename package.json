@@ -1,0 +1,29 @@
+{
+  "name": "microbundle-build-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/GugaLiz/microbundle-build-template.git",
+  "author": "liuli",
+  "license": "MIT",
+  "scripts": {
+    "build:lib": "rimraf build && cross-env microbundle-crl build -i ./src/index.ts -o build --format=umd --external=child_process --css inline --name=RestrictMiniProgramAccess --jsx=h --css-modules=false",
+    "server": "live-server"
+  },
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "rollup-plugin-alias": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/minimatch": "^3.0.5",
+    "brace-expansion": "^1.1.7",
+    "cross-env": "7.0.3",
+    "microbundle-crl": "0.13.11",
+    "micromatch": "4.0.4",
+    "minimatch": "3.0.4",
+    "path-browserify": "^1.0.1",
+    "rimraf": "3.0.2",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "tap": "^10.3.2"
+  }
+}
